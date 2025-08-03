@@ -1,0 +1,71 @@
+.home-container {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(to bottom right, #f8e4ff, #e0f7ff);
+  min-height: 100vh;
+  color: #333;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+.pet-avatar {
+  width: 150px;
+  margin: 20px auto;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.points-box {
+  background: #fff0f6;
+  border-radius: 20px;
+  padding: 1rem;
+  margin: 1rem auto;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.progress-bar {
+  background: #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 10px;
+  margin-top: 10px;
+}
+
+.progress-fill {
+  background: #00bcd4;
+  height: 100%;
+  transition: width 0.4s ease;
+}
+
+.language-selector span {
+  font-size: 2rem;
+  margin: 0 10px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.language-selector span:hover {
+  transform: scale(1.2);
+}
+
+.option-buttons button {
+  background-color: #ff80ab;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  color: white;
+  margin: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.option-buttons button:hover {
+  background-color: #f06292;
+  transform: scale(1.05);
+}

@@ -1,0 +1,121 @@
+/* Full layout styling */
+body, html, .app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Header input fields */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.header input {
+  padding: 12px;
+  border-radius: 12px;
+  border: 2px solid #fff;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.3);
+  color: #000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.header input:focus {
+  background: #ffffff;
+  border-color: #80d0c7;
+}
+
+/* Chat display */
+.chat-box {
+  width: 90%;
+  max-width: 800px;
+  height: 60vh;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 20px;
+  margin: 20px 0;
+  overflow-y: auto;
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  scroll-behavior: smooth;
+}
+
+/* Message bubbles */
+.message {
+  max-width: 75%;
+  padding: 12px 16px;
+  border-radius: 20px;
+  font-size: 16px;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.message.user {
+  background: #ffecb3;
+  align-self: flex-end;
+  border-bottom-right-radius: 0;
+}
+
+.message.ai {
+  background: #b2ebf2;
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
+}
+
+/* Mic button */
+.mic-container {
+  margin-bottom: 30px;
+}
+
+.mic-btn {
+  font-size: 30px;
+  padding: 20px;
+  border: none;
+  border-radius: 50%;
+  background: #ff6f61;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.mic-btn:hover {
+  background: #ff8a65;
+  transform: scale(1.1);
+}
+
+.mic-btn:active {
+  background: #e64a19;
+  transform: scale(0.95);
+}
+
+.mic-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
