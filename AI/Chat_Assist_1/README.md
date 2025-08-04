@@ -8,7 +8,13 @@ This project builds a **smart, interactive, child-friendly AI tutor** that:
 ---
 
 ## 📁 Folder Structure
-
+.
+├── main.py / app.py # FastAPI backend entry point
+├── final_rag_chain.py # Core LangChain logic: multi-query RAG pipeline
+├── data/ # Folder containing PDFs, PPTs, Markdown, and Text files
+├── frontend/ # React frontend (optional)
+├── requirements.txt # Python dependencies
+└── README.md # You're reading it!
 
 
 ---
@@ -54,3 +60,6 @@ source env/bin/activate  # On Windows: env\Scripts\activate
 
 # Install required libraries
 pip install -r requirements.txt
+
+#Start the API
+uvicorn main:app --reload
